@@ -1,7 +1,6 @@
 import Choice from "./Choice";
 
-const Question = ({question, handleSubmit}) => (
- 
+const Question = ({ question }) => (
   <div>
     <p>{question.text}</p>
     <div className="choices">
@@ -12,13 +11,11 @@ const Question = ({question, handleSubmit}) => (
             value={choice.name}
             label={choice.label}
             key={choice.name}
-            handleChange={handleSubmit}
           />
         );
       })}
     </div>
   </div>
-  
 );
 
 export default Question;
